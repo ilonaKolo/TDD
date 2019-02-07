@@ -24,14 +24,14 @@ class ReceiptTest extends TestCase {
 		);
 	}
 
-	public function testTotalAndCoupon() {
+	public function testTotalAndCoupon() { // Uus funktsioon, sarnane eelmisega;
 		$input = [0,2,5,8];
-		$coupon = 0.20;
+		$coupon = 0.20; // Väärtus;
 		$output = $this->Receipt->total($input, $coupon);
-		$this->assertEquals(
-			12,
-			$output,
-			'When summing the total should equal 12'
+		$this->assertEquals( // Veendu, et võrdub;
+			12, // Eeldatav tulemus;
+			$output, // Väljund;
+			'When summing the total should equal 12' // Veateade;
 		);
 	}
 
