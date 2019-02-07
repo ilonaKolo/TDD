@@ -26,11 +26,11 @@ class ReceiptTest extends TestCase {
 	public function testTax() { // Uus funktsioon;
 		$inputAmount = 10.00; // Kogu sisend;
 		$taxInput = 0.10; // Tax-sisend;
-		$output = $this->Receipt->tax($inputAmount, $taxInput); // Väljund;
-		$this->assertEquals(
-			1.00,
-			$output, // Muutuja;
-			'The tax calculation should equal 1.00' // Tax
+		$output = $this->Receipt->tax($inputAmount, $taxInput); // Luuaks tax-väljund;
+		$this->assertEquals( // Veendu, et võrdub;
+			1.00, // Eeldatav tulemus;
+			$output, // Väljund;
+			'The tax calculation should equal 1.00' // Veateada;
 		);
 	}
 }
